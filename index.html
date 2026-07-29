@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interfaces Inclusivas - Projeto UX e Acessibilidade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Ferramentas de Acessibilidade -->
+  <aside class="accessibility-bar" aria-label="Ferramentas de acessibilidade">
+    <button id="btn-contrast" aria-pressed="false">
+      🌓 Alto Contraste
+    </button>
+    <button id="btn-increase-font" aria-label="Aumentar tamanho da fonte">
+      A+
+    </button>
+
+      A-
+    </button>
+  </aside>
+
+  <!-- Cabeçalho Principal -->
+  <header class="header">
+    <h1>Desenvolvendo Interfaces Inclusivas</h1>
+    <p>A Web deve ser para todas as pessoas.</p>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <section class="card" aria-labelledby="sec-title-1">
+      <h2 id="sec-title-1">O que é Acessibilidade Web (a11y)?</h2>
+      <p>
+        Acessibilidade Web significa garantir que pessoas com deficiência possam compreender, navegar, interagir e contribuir para a Web. Ela beneficia também pessoas com limitações temporárias ou de idade avançada.
+      </p>
+      
+      <!-- Exemplo de Imagem Acessível -->
+      <figure>
+        <img 
+          src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" 
+          alt="Duas pessoas trabalhando juntas em um computador portátil, sendo uma delas usuária de tecnologia assistiva."
+          class="responsive-img"
+        >
+        <figcaption>Tecnologia e inclusão caminhando juntas.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Formulário Acessível -->
+    <section class="card" aria-labelledby="sec-title-2">
+      <h2 id="sec-title-2">Deixe seu Feedback</h2>
+      <form id="feedback-form">
+        <div class="form-group">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Sua Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required aria-required="true"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2026 - Projeto da 2ª Série do Ensino Médio | Componente de Programação</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

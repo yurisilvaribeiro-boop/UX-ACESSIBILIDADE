@@ -1,0 +1,145 @@
+/* Definição das Variáveis Globais (Padrão e Alto Contraste) */
+:root {
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-color: #2b2b2b;
+  --primary-color: #0056b3;
+  --primary-hover: #003d80;
+  --border-color: #cccccc;
+  --focus-ring: #ffbf47;
+  --font-base-size: 100%; /* 16px por padrão */
+}
+
+/* Tema de Alto Contraste */
+body.high-contrast {
+  --bg-color: #000000;
+  --card-bg: #121212;
+  --text-color: #ffffff;
+  --primary-color: #ffff00; /* Amarelo sobre preto para máximo contraste */
+  --primary-hover: #ffd700;
+  --border-color: #ffffff;
+  --focus-ring: #00ffff;
+}
+
+/* Reset básico e tipografia */
+html {
+  font-size: var(--font-base-size);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Barra de Acessibilidade */
+.accessibility-bar {
+  background-color: var(--card-bg);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.accessibility-bar button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.high-contrast .accessibility-bar button {
+  color: #000000;
+}
+
+/* Foco visível e acessível para navegação por teclado */
+*:focus-visible {
+  outline: 4px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Estrutura da Página */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Formulário */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.high-contrast .btn-submit {
+  color: #000000;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+}
